@@ -1,5 +1,5 @@
 # Write your code here
 def rotate(xs,n):
-    if n>(len(xs)-1):
-        return None
-    return xs[n:] + xs[:n]
+    for _ in range(n):
+        x = xs.pop(0)
+        xs.append(x)
