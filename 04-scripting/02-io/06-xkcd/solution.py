@@ -2,6 +2,7 @@ from PIL import Image
 import urllib.request
 import json
 import sys
+#import PIL.Image
 
 
 def fetch_data(n):
