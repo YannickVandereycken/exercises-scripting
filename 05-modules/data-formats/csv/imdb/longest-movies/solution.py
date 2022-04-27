@@ -17,7 +17,8 @@ def runtime(row):
             raise
 
 
-with open("../title-basics.tsv", encoding='utf-8') as file:
+with open("../imdb/title-basics.tsv", encoding='utf-8') as file:
+#with open("imdb.csv", encoding='utf-8') as file:
     reader = csv.DictReader(file, delimiter='\t', quoting=csv.QUOTE_NONE)
     results = [ (row['originalTitle'], runtime(row)) for row in reader if row['runtimeMinutes'] != r'\N' ]
 
